@@ -5,7 +5,7 @@
         <field name="MODE">WHILE</field>
         <value name="NUMBER">
           <block type="logic_compare" id="60" inline="true">
-            <field name="OP">EQ</field>
+            <field name="OP">GT</field>
             <value name="A">
               <block type="sensor_object" id="122">
                 <field name="OBJECT">LEFTFRONT</field>
