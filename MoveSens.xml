@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="10" x="129" y="99">
+  <block type="movement_forward" id="10" x="83" y="67">
     <next>
       <block type="controls_whileUntil" id="44" inline="false">
         <field name="MODE">WHILE</field>
@@ -28,7 +28,40 @@
           </block>
         </statement>
         <next>
-          <block type="movement_stop" id="72"></block>
+          <block type="movement_stop" id="72">
+            <next>
+              <block type="controls_whileUntil" id="143" inline="false">
+                <field name="MODE">WHILE</field>
+                <value name="NUMBER">
+                  <block type="logic_compare" id="144" inline="true">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="sensor_object" id="145">
+                        <field name="OBJECT">LEFTSIDE</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="146">
+                        <field name="NUM">50</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="robot_delay" id="147" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="148">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="movement_stop" id="149"></block>
+                </next>
+              </block>
+            </next>
+          </block>
         </next>
       </block>
     </next>
